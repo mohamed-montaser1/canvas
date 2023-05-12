@@ -30,7 +30,7 @@ class Star {
 }
 let elArray = [];
 function createNewStar() {
-  elArray.push(new Star(Math.random() * canvas.width, Math.random()));
+  elArray.push(new Star(Math.random() * canvas.width));
 }
 function animate() {
   createNewStar();
