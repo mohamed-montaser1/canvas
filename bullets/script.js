@@ -38,7 +38,6 @@ class Bullet {
     } else if (this.dir === "bottom") {
       this.y -= this.speedX;
     }
-    // console.log(this.x);
     if (this.x < 0) this.delete();
   }
   draw() {
@@ -61,7 +60,6 @@ canvas.onclick = function () {
   );
 };
 window.addEventListener("keyup", function (e) {
-  console.log(e.key);
   if (e.key === "ArrowLeft") {
     elArray.push(new Bullet("left"));
   } else if (e.key === "ArrowRight") {
