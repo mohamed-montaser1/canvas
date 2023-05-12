@@ -4,6 +4,10 @@ let elArray = [];
 let hue = 0;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+window.onresize = () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+};
 class Bullet {
   constructor(dir) {
     if (dir === "left") {
@@ -51,7 +55,9 @@ class Bullet {
 
 canvas.onclick = function () {
   elArray.push(
-    new Bullet(["left", "right", "top", "bottom"][Math.floor(Math.random() * 4)])
+    new Bullet(
+      ["left", "right", "top", "bottom"][Math.floor(Math.random() * 4)]
+    )
   );
 };
 window.addEventListener("keyup", function (e) {
