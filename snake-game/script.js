@@ -48,6 +48,9 @@ class Snake {
   updateLength(el) {
     this.length.push(el);
   }
+  updateSize() {
+    this.blockSize += 5;
+  }
   updateDir(dir) {
     this.dir = dir;
     switch (dir) {
@@ -155,6 +158,9 @@ function animation() {
   ) {
     food.generate();
     snake.updateLength(1);
+    if (snake.blockSize < 40) {
+      snake.updateSize();
+    }
   }
   ctx.fillStyle = "rgba(0,0,0,0.2)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
