@@ -72,7 +72,7 @@ window.addEventListener("keyup", function (e) {
 });
 function animation() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = "rgba(0,0,0,0.3)";
+  ctx.fillStyle = "black";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   for (let i in elArray) {
     elArray[i].update();
