@@ -48,6 +48,10 @@ class Snake {
   updateLength(el) {
     this.length.push(el);
   }
+  setSpeed(speed) {
+    this.speedX += speed;
+    this.speedY += speed;
+  }
   updateSize() {
     this.blockSize += 5;
   }
@@ -160,6 +164,9 @@ function animation() {
     snake.updateLength(1);
     if (snake.blockSize < 40) {
       snake.updateSize();
+    }
+    if (score % 10 == 0) {
+      snake.setSpeed(2);
     }
   }
   ctx.fillStyle = "rgba(0,0,0,0.2)";

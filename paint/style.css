@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.controlls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+  gap: 30px;
+}
+
+.controlls .field {
+  display: flex;
+  gap: 15px;
+}
+
+canvas {
+  background-color: black;
+}
