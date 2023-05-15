@@ -10,7 +10,7 @@ let size = 10;
 let painting = false;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -62,5 +62,5 @@ clear.onclick = function () {
 };
 
 download.onclick = function () {
-  this.href = canvas.toDataURL()
+  this.href = canvas.toDataURL();
 };
