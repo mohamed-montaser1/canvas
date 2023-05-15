@@ -60,3 +60,7 @@ function draw(e) {
 clear.onclick = function () {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 };
+
+download.onclick = function () {
+  this.href = canvas.toDataURL()
+};
